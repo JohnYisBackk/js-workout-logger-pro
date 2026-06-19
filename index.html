@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Workout Logger PRO</title>
+  </head>
+  <body>
+    <main class="training-shell">
+      <section class="training-hero">
+        <div>
+          <p class="hero-badge">Workout Tracker PRO</p>
+          <h1>Track your lifts like an athlete</h1>
+          <p>
+            Log exercises, track sets, monitor weight and keep your training
+            history organized in one clean dashboard.
+          </p>
+        </div>
+      </section>
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <span id="totalExercises">0</span>
+          <p>Total Exercises</p>
+        </article>
+
+        <article class="stat-card">
+          <span id="totalSets">0</span>
+          <p>Total Sets</p>
+        </article>
+
+        <article class="stat-card">
+          <span id="highestWeight">0 kg</span>
+          <p>Highest Weight</p>
+        </article>
+
+        <article class="stat-card">
+          <span id="totalVolume">0 kg</span>
+          <p>Total Volume</p>
+        </article>
+      </section>
+
+      <section class="tracker-layout">
+        <aside class="log-panel">
+          <h2>Add Exercise</h2>
+
+          <form id="workoutForm">
+            <div class="field-box">
+              <label for="exerciseInput">Exercise</label>
+              <input
+                type="text"
+                id="exerciseInput"
+                placeholder="Example: Bench Press"
+              />
+            </div>
+
+            <div class="field-box">
+              <label for="muscleInput">Muscle Group</label>
+              <select id="muscleInput">
+                <option value="chest">Chest</option>
+                <option value="back">Back</option>
+                <option value="shoulders">Shoulders</option>
+                <option value="biceps">Biceps</option>
+                <option value="triceps">Triceps</option>
+                <option value="legs">Legs</option>
+                <option value="core">Core</option>
+              </select>
+            </div>
+
+            <div class="input-row">
+              <div class="field-box">
+                <label for="weightInput">Weight (kg)</label>
+                <input
+                  type="number"
+                  id="weightInput"
+                  placeholder="70"
+                  min="0"
+                />
+              </div>
+
+              <div class="field-box">
+                <label for="repsInput">Reps</label>
+                <input type="number" id="repsInput" placeholder="8" min="1" />
+              </div>
+            </div>
+
+            <div class="field-box">
+              <label for="setsInput">Sets</label>
+              <input type="number" id="setsInput" placeholder="3" min="1" />
+            </div>
+
+            <button type="submit">Add to Workout</button>
+          </form>
+        </aside>
+
+        <section class="workout-area">
+          <div class="tools-card">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search exercises..."
+            />
+
+            <div class="muscle-filters">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="chest">Chest</button>
+              <button class="filter-btn" data-filter="back">Back</button>
+              <button class="filter-btn" data-filter="shoulders">
+                Shoulders
+              </button>
+              <button class="filter-btn" data-filter="biceps">Biceps</button>
+              <button class="filter-btn" data-filter="triceps">Triceps</button>
+              <button class="filter-btn" data-filter="legs">Legs</button>
+              <button class="filter-btn" data-filter="core">Core</button>
+            </div>
+          </div>
+
+          <div id="exerciseGrid" class="exercise-grid">
+            <!-- Exercise cards will be rendered here -->
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
