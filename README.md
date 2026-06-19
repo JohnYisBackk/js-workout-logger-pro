@@ -2,7 +2,7 @@
 
 ## 🚀 Live Demo
 
-🔗  
+🔗  [click me to check live demo](https://johnyisbackk.github.io/js-workout-logger-pro/)
 
 ---
 
